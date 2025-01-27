@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Diamond Price Prediction</title>
+
+    <style>
+        h1 {
+            color: aqua;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 70%;
+            height: auto;
+            padding: 25px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: darkviolet;
+        }
+
+        label {
+            color: white;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        button {
+            background-color: aqua;
+            color: black;
+            padding: 10px ;
+            margin: 25px 0;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            opacity: 0.9;
+            font-size: 20px;
+            position: relative;
+            margin-left: 40%;
+            
+        }
+
+        button:hover {
+            opacity: 1;
+            transform: translate(1px);
+
+        }
+   </style>
+</head>
+<body style="background-color: darkmagenta;">
+    <h1>Diamond Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label  for="carat">Carat:</label>
+        <input  type="number" id="carat" name="carat" required><br>
+
+        <label for="cut">Cut (0: Fair, 1: Good, 2: Very Good, 3: Premium, 4: Ideal):</label>
+        <input type="text" id="cut" name="cut" required><br>
+
+        <label for="color">Color (0: J, 1: I, 2: H, 3: G, 4: F, 5: E, 6: D):</label>
+        <input type="text" id="color" name="color" required><br>
+
+        <label for="clarity">Clarity (0: I1, 1: SI2, 2: SI1, 3: VS2, 4: VS1, 5: VVS2, 6: VVS1, 7: IF):</label>
+        <input type="text" id="clarity" name="clarity" required><br>
+
+        <label for="depth">Depth:</label>
+        <input type="text" id="depth" name="depth" required><br>
+
+        <label for="table">Table:</label>
+        <input type="text" id="table" name="table" required><br>
+
+        <label for="x">Length (x):</label>
+        <input type="text" id="x" name="x" required><br>
+
+        <label for="y">Width (y):</label>
+        <input type="text" id="y" name="y" required><br>
+
+        <label for="z">Depth (z):</label>
+        <input type="text" id="z" name="z" required><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html>
